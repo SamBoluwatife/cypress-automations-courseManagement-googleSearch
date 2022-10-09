@@ -1,0 +1,14 @@
+{
+  "chromeWebSecurity": false,
+  "projectId": "pcrtom",
+  "reporter": "mochawesome",
+  "retries": {
+    "runMode": 2,
+    "openMode": 1
+  },
+  "env": {
+    "testUrl": "https://www.instagram.com"
+  },
+  "defaultCommandTimeout": 30000,
+  "pageLoadTimeout": 50000
+}
