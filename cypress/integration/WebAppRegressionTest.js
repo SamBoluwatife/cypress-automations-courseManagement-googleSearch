@@ -97,35 +97,35 @@ cy.get('.css-tzsjye > .MuiButton-root').click();
    cy.get('.css-48p1y4 > .MuiButton-root').click();
   
   //type email in the email field
-  cy.get('[data-testid=EmailAddress]').type("ay@mail.com")
+  cy.get('[data-testid=EmailAddress]').type("ay@mail.com");
   
   //type password in the password field
-  cy.get('[data-testid=Password]').type("pass1234")
+  cy.get('[data-testid=Password]').type("pass1234");
   
   //click the login button
   cy.get('.MuiButton-contained').click();
   
   //click add course button
-  cy.get('.MuiGrid-root > .MuiButton-root').click()
+  cy.get('.MuiGrid-root > .MuiButton-root').click();
 
 //course title
-cy.get('[data-testid="Title*"]').type("Cypress 529")
+cy.get('[data-testid="Title*"]').type("Cypress 529");
 
 //description
-cy.get(':nth-child(2) > .MuiFormControl-root > .MuiOutlinedInput-root').type("AdvancedCypress")
+cy.get(':nth-child(2) > .MuiFormControl-root > .MuiOutlinedInput-root').type("AdvancedCypress");
 
   //select quality assurance
   cy.get('#demo-simple-select').click();
   cy.get('[data-value="1"]').click();
 
 //image url
-  cy.get('[data-testid=ImageURL]').type("https://unsplash.com/photos/FlPc9_VocJ4")
+  cy.get('[data-testid=ImageURL]').type("https://unsplash.com/photos/FlPc9_VocJ4");
   
   //select offline course
   cy.get('[data-testid=offline]').click();
 
 //address
-  cy.get('[data-testid="Address*"]').type("file/downloads/cypress")
+  cy.get('[data-testid="Address*"]').type("file/downloads/cypress");
 
 //create course
 cy.get('.css-tzsjye > .MuiButton-root').click();
@@ -146,10 +146,10 @@ it("Validate that the user can delete a course successfully on the Quales Learni
    cy.get('.css-48p1y4 > .MuiButton-root').click();
   
   //type email in the email field
-  cy.get('[data-testid=EmailAddress]').type("ay@mail.com")
+  cy.get('[data-testid=EmailAddress]').type("ay@mail.com");
   
   //type password in the password field
-  cy.get('[data-testid=Password]').type("pass1234")
+  cy.get('[data-testid=Password]').type("pass1234");
   
   //click the login button
   cy.get('.MuiButton-contained').click();
@@ -158,9 +158,12 @@ it("Validate that the user can delete a course successfully on the Quales Learni
 cy.get(':nth-child(2) > .MuiCardMedia-root').click();
  
 //delete course
-cy.get('.css-wvpqgg').click()
+cy.get('.css-wvpqgg').click();
 
-cy.get('.MuiBox-root > .MuiButton-contained').click()
+cy.get('.MuiBox-root > .MuiButton-contained').click();
+
+//confirmation toast that the course was deleted successfully
+cy.contains('Course deleted successfully');
 
 });
 
