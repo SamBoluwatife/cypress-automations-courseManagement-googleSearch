@@ -86,7 +86,7 @@ cy.get('.css-tzsjye > .MuiButton-root').click();
   });
   
 //test 5
-  it("Validate that the user can create a course successfully on the Quales Learning Platform with invalid credetial",  () => {
+  it("Validate that the user can create a course successfully on the Quales Learning Platform",  () => {
  
     //visiting the Quales url
   cy.visit("http://tawdry-rule.surge.sh/");
@@ -135,7 +135,7 @@ cy.get('.css-tzsjye > .MuiButton-root').click();
   });
 
 //test 6
-it("Validate that the user can delete a course successfully on the Quales Learning Platform with invalid credetial",  () => {
+it("Validate that the user can delete a course successfully on the Quales Learning Platform",  () => {
  
   //visiting the Quales url
   cy.visit("http://tawdry-rule.surge.sh/");
@@ -146,7 +146,7 @@ it("Validate that the user can delete a course successfully on the Quales Learni
    cy.get('.css-48p1y4 > .MuiButton-root').click();
   
   //type email in the email field
-  cy.get('[data-testid=EmailAddress]').type("ay@mail.com");
+  cy.get('[data-testid=EmailAddress]').type("ayp@mail.com");
   
   //type password in the password field
   cy.get('[data-testid=Password]').type("pass1234");
@@ -163,7 +163,7 @@ cy.get('.css-wvpqgg').click();
 cy.get('.MuiBox-root > .MuiButton-contained').click();
 
 //confirmation toast that the course was deleted successfully
-cy.contains('Course deleted successfully');
+cy.contains('Course deleted successfully').should('be.visible');
 
 });
 
