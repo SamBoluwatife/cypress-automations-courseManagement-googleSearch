@@ -1,7 +1,7 @@
 {
-  "name": "automationforseamfix",
+  "name": "testautomation",
   "version": "1.0.0",
-  "description": "End to End automated test for seamfix",
+  "description": "End to End automated tests",
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run",
@@ -17,7 +17,7 @@
     "cypress",
     "automation"
   ],
-  "author": "Ayobami",
+  "author": "Boluwatife",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^11.2.0",
