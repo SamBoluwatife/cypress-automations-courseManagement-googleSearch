@@ -31,3 +31,5 @@ import './Login.actions'
 
 //import postgreSQL from 'cypress-postgresql';
 //postgreSQL.loadDBCommands();
+
+require('cypress-xpath') //XPath
