@@ -1,23 +1,153 @@
 {
   "stats": {
-    "suites": 0,
-    "tests": 0,
+    "suites": 1,
+    "tests": 4,
     "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2022-11-25T15:09:54.632Z",
-    "end": "2022-11-25T15:09:54.638Z",
-    "duration": 6,
-    "testsRegistered": 0,
-    "passPercent": null,
-    "pendingPercent": null,
+    "failures": 4,
+    "start": "2022-12-02T22:10:31.713Z",
+    "end": "2022-12-02T22:10:48.256Z",
+    "duration": 16543,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false
   },
   "results": [
-    false
+    {
+      "uuid": "bcd2f40f-fd0e-4976-ba2d-cd3b653c33d4",
+      "title": "",
+      "fullFile": "cypress/e2e/APIRegressionTest.js",
+      "file": "cypress/e2e/APIRegressionTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "31dadb3c-5fc4-472f-a4b5-287d8df8c5cb",
+          "title": "Quales Course Management Regression API Test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Creates a Course",
+              "fullTitle": "Quales Course Management Regression API Test suite Creates a Course",
+              "timedOut": null,
+              "duration": 1149,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"/\" + path,\n  body: {\n    title: \"Course Automation 5\" + randomChar(4),\n    categoryId: 2,\n    description: \"The Advanced Cypress course\",\n    courseUrl: \"https://www.youtube.com/watch?v=8vXoMqWgbQQ\",\n    imageUrl: \"https://source.unsplash.com/user/c_v_r/900x800\",\n    location: \"online\",\n    isPremium: false\n  }\n}).as(\"createACourseRequest\");\ncy.get(\"@createACourseRequest\").then(res => {\n  const responseBody = res.body;\n  cy.log(JSON.stringify(res.body));\n  expect(res.status).to.eq(200);\n  courseId = res.body.id;\n  cy.log(JSON.stringify(courseId));\n  expect(responseBody).to.have.property(\"id\");\n  expect(responseBody).to.have.property(\"title\");\n});",
+              "err": {
+                "message": "ReferenceError: randomChar is not defined",
+                "estack": "ReferenceError: randomChar is not defined\n    at Context.eval (webpack:///./cypress/e2e/APIRegressionTest.js:15:15)",
+                "diff": null
+              },
+              "uuid": "41eab532-da42-4562-8237-a81a6e7762c2",
+              "parentUUID": "31dadb3c-5fc4-472f-a4b5-287d8df8c5cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Gets a  Course",
+              "fullTitle": "Quales Course Management Regression API Test suite Gets a  Course",
+              "timedOut": null,
+              "duration": 1192,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: \"/\" + path + courseId\n}).as(\"searchACourseRequest\");\ncy.get(\"@searchACourseRequest\").then(res => {\n  const responseBody = res.body;\n  cy.log(JSON.stringify(res.body));\n  expect(res.status).to.eq(200);\n  expect(responseBody).to.have.property(\"id\");\n  expect(responseBody).to.have.property(\"title\");\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` must be provided a fully qualified `url` - one that begins with `http`. By default `cy.request()` will use either the current window's origin or the `baseUrl` in `cypress.config.js`. Neither of those values were present.\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` must be provided a fully qualified `url` - one that begins with `http`. By default `cy.request()` will use either the current window's origin or the `baseUrl` in `cypress.config.js`. Neither of those values were present.\n\nhttps://on.cypress.io/request\n    at Context.request (http://localhost:60344/__cypress/runner/cypress_runner.js:144049:78)\n    at wrapped (http://localhost:60344/__cypress/runner/cypress_runner.js:157849:43)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/APIRegressionTest.js:36:7)",
+                "diff": null
+              },
+              "uuid": "a8eeaff9-e0c6-4582-9e65-46d3512561f1",
+              "parentUUID": "31dadb3c-5fc4-472f-a4b5-287d8df8c5cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deletes a created course",
+              "fullTitle": "Quales Course Management Regression API Test suite Deletes a created course",
+              "timedOut": null,
+              "duration": 1387,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"DELETE\",\n  url: \"/\" + path + courseId\n}).as(\"deleteACourseRequest\");\ncy.get(\"@deleteACourseRequest\").then(res => {\n  cy.log(JSON.stringify(res.body));\n  expect(res.status).to.eq(204);\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` must be provided a fully qualified `url` - one that begins with `http`. By default `cy.request()` will use either the current window's origin or the `baseUrl` in `cypress.config.js`. Neither of those values were present.\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` must be provided a fully qualified `url` - one that begins with `http`. By default `cy.request()` will use either the current window's origin or the `baseUrl` in `cypress.config.js`. Neither of those values were present.\n\nhttps://on.cypress.io/request\n    at Context.request (http://localhost:60344/__cypress/runner/cypress_runner.js:144049:78)\n    at wrapped (http://localhost:60344/__cypress/runner/cypress_runner.js:157849:43)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/APIRegressionTest.js:50:7)",
+                "diff": null
+              },
+              "uuid": "a773bb2c-fab1-47bf-a046-3ed265c4be3c",
+              "parentUUID": "31dadb3c-5fc4-472f-a4b5-287d8df8c5cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Gets All Courses",
+              "fullTitle": "Quales Course Management Regression API Test suite Gets All Courses",
+              "timedOut": null,
+              "duration": 1307,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: \"/\" + path\n}).as(\"searchAllCoursesRequest\");\ncy.get(\"@searchAllCoursesRequest\").then(res => {\n  const responseBody = res.body;\n  cy.log(JSON.stringify(res.body));\n  expect(res.status).to.eq(200);\n  expect(responseBody.data[0]).to.have.property(\"id\");\n  expect(responseBody.data[0]).to.have.property(\"title\");\n});",
+              "err": {
+                "message": "CypressError: `cy.request()` must be provided a fully qualified `url` - one that begins with `http`. By default `cy.request()` will use either the current window's origin or the `baseUrl` in `cypress.config.js`. Neither of those values were present.\n\nhttps://on.cypress.io/request",
+                "estack": "CypressError: `cy.request()` must be provided a fully qualified `url` - one that begins with `http`. By default `cy.request()` will use either the current window's origin or the `baseUrl` in `cypress.config.js`. Neither of those values were present.\n\nhttps://on.cypress.io/request\n    at Context.request (http://localhost:60344/__cypress/runner/cypress_runner.js:144049:78)\n    at wrapped (http://localhost:60344/__cypress/runner/cypress_runner.js:157849:43)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/APIRegressionTest.js:61:7)",
+                "diff": null
+              },
+              "uuid": "70c63e43-943f-49b4-a38c-0730531839fc",
+              "parentUUID": "31dadb3c-5fc4-472f-a4b5-287d8df8c5cb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "41eab532-da42-4562-8237-a81a6e7762c2",
+            "a8eeaff9-e0c6-4582-9e65-46d3512561f1",
+            "a773bb2c-fab1-47bf-a046-3ed265c4be3c",
+            "70c63e43-943f-49b4-a38c-0730531839fc"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5035,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
   ],
   "meta": {
     "mocha": {

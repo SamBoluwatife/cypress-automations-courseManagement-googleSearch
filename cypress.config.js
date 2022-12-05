@@ -2,7 +2,7 @@ const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
   chromeWebSecurity: false,
-  projectId: 'pcrtom',
+  projectId: 'e1mfcn',
   reporter: 'mochawesome',
   retries: {
     runMode: 2,

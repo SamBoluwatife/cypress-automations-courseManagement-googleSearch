@@ -17,7 +17,7 @@
 import './LoadBaseUrl.actions'
 import './Assertions'
 import './Login.actions'
-
+import './commands.js'
 
 
 // Alternatively you can use CommonJS syntax:
