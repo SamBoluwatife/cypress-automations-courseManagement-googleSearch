@@ -33,3 +33,4 @@ cypress/e2e/2-advanced-examples/assertions.cy.js
 cypress/e2e/2-advanced-examples/aliasing.cy.js
 cypress/e2e/2-advanced-examples/actions.cy.js
 cypress/e2e/1-getting-started/todo.cy.js
+cypress/e2e/Practice/tableElements.js 
