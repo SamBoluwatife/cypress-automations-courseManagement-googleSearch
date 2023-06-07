@@ -35,7 +35,7 @@ describe ("UI Automation", ()=> {
         cy.get("input[name='password']").type("P@ssw0rd")
         cy.get("button[type='submit']").should('be.enabled').click()
         cy.get('.ub-bs_17sc08g').should('be.visible').contains('Authentication Successful')
-        cy.xpath("(//p[@class='chakra-text css-x8h6hl'][normalize-space()='Courses'])[1]").click()
+        cy.get("a[href='/dashboard/courses']").click()
         cy.get("button[class='chakra-button css-1wd62wy']").click()
         //course without ceertificate
         cy.get("button[data-testid='create-without-quiz']").click()
