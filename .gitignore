@@ -34,3 +34,7 @@ cypress/e2e/2-advanced-examples/aliasing.cy.js
 cypress/e2e/2-advanced-examples/actions.cy.js
 cypress/e2e/1-getting-started/todo.cy.js
 cypress/e2e/Practice/tableElements.js 
+cypress/videos/bookAppointment.js.mp4
+cypress/e2e/Practice/jumia.cy.js
+cypress/e2e/Practice/topSetTask.js
+cypress/e2e/Practice/mouseMovement.js
