@@ -38,3 +38,4 @@ cypress/videos/bookAppointment.js.mp4
 cypress/e2e/Practice/jumia.cy.js
 cypress/e2e/Practice/topSetTask.js
 cypress/e2e/Practice/mouseMovement.js
+cypress/e2e/Practice/enyataAssessment.cy.js
