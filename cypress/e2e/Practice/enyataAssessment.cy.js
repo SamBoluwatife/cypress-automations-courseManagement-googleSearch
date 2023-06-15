@@ -38,7 +38,7 @@ describe ("UI Automation", ()=> {
         cy.get("a[href='/dashboard/courses']").click()
         cy.get("button[class='chakra-button css-1wd62wy']").click()
         //course without ceertificate
-        cy.get("button[data-testid='create-without-quiz']").click()
+        cy.get("button[data-testid='create-without-quiz']").click()   
         //step1
         cy.get("input[name='title']").type('Cypress 101')
         cy.get('[class="chakra-select css-e4yag9"]').select('Free')

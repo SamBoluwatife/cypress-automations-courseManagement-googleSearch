@@ -5,11 +5,8 @@ const christmasDay = new ChristmasDay()
 describe('Christmas Day',()=> {
 
     it('verify that 25 December is visible as christmas day', ()=> {
-
-        cy.visit('https://www.google.com');  
-        
+        cy.visit('https://www.google.com');    
         christmasDay.getSearchField().clear().type('christmas day {enter}');   
-        
         christmasDay.getChristmasDate().should("be.visible")
         .and("contain.text","25 December")
     })
