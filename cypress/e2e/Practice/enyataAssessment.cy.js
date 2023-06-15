@@ -30,7 +30,7 @@ describe ("UI Automation", ()=> {
         
     })
 
-    it.only("Create course", ()=>{
+    it("Create course", ()=>{
         cy.get("input[id='Email']").type("Enyatauser@yopmail.com")
         cy.get("input[name='password']").type("P@ssw0rd")
         cy.get("button[type='submit']").should('be.enabled').click()

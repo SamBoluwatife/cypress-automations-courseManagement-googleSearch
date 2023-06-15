@@ -5,13 +5,10 @@ node_modules
 node_modules
 node_modules
 node_modules
-cypress/e2e/Practice/BookAppointment.js
 cypress/e2e/Practice/PracticeElements2.js
-cypress/e2e/Practice/SourceDemo.js
 cypress/e2e/Practice/Tables.js
 cypress/e2e/Practice/PracticeElements.js
 cypress/e2e/Practice/PracticeAssertions.js
-cypress/e2e/Practice/LumoEcommerce.js
 cypress/e2e/2-advanced-examples/window.cy.js
 cypress/e2e/2-advanced-examples/waiting.cy.js
 cypress/e2e/2-advanced-examples/viewport.cy.js
@@ -36,6 +33,4 @@ cypress/e2e/1-getting-started/todo.cy.js
 cypress/e2e/Practice/tableElements.js 
 cypress/videos/bookAppointment.js.mp4
 cypress/e2e/Practice/jumia.cy.js
-cypress/e2e/Practice/topSetTask.js
 cypress/e2e/Practice/mouseMovement.js
-cypress/e2e/Practice/enyataAssessment.cy.js
