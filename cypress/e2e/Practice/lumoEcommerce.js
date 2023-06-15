@@ -51,8 +51,7 @@ describe ('End to End Testing', ()=> {
 
         cy.get('#send2').click()
 
-        cy.get("div[class='panel header']").contains('Welcome, Jane Doughnut'); //confirm welcome message
-
+        cy.get("div[class='panel header']").contains('Welcome, Jane Doughnut'); 
 
     })
 

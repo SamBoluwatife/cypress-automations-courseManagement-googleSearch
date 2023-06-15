@@ -6,8 +6,7 @@ describe ('TopSet Platform', ()=> {
     })
 
     
-    it ('To verify that a user can successfully login with valid credentials', ()=> {
-        
+    it ('To verify that a user can successfully login with valid credentials', ()=> { 
         cy.get("input[placeholder='Email Address']")
         .type("qa.analyst@email.com")
         .should('have.value', 'qa.analyst@email.com');
@@ -23,7 +22,6 @@ describe ('TopSet Platform', ()=> {
     })
 
     it ('To verify that login is unsuccessful with invalid credentials', ()=> {
-
         cy.get("input[placeholder='Email Address']")
         .type("qa.analyst@gmail.net")
         .should('have.value', 'qa.analyst@gmail.net');
@@ -37,7 +35,6 @@ describe ('TopSet Platform', ()=> {
     })
 
     it ('To verify that an error message displayed when the required fields are left blank', ()=> {
-
         cy.get("button[type='submit']")
         .click();
 
@@ -49,7 +46,6 @@ describe ('TopSet Platform', ()=> {
     })
 
     it ('To verify that an error message displayed when the password does not meet the minimum length requirement', ()=> {
-
         cy.get("input[placeholder='Email Address']")
         .type("qa.analyst@email.com")
         .should('have.value', 'qa.analyst@email.com');
